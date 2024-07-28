@@ -4,7 +4,7 @@ import image2 from '../images/App LOGO.png'
 import './Sabka.css';
 export default function MobileAccess() {
     return (
-        <div style={{transform:'translate(0,15vh)'}}>
+        <div className='mobileAccess' style={{transform:'translate(0,15vh)'}}>
             <div id="mob" style={{display:'flex',flexDirection:'row', padding:'2vh 8vw'}}>
                 <div>
                     <img id="mobile" src={image} style={{height:'53vh',width:'40vw',borderRadius:'3vw'}}/>
@@ -17,7 +17,7 @@ export default function MobileAccess() {
             <br />
             <br />
             <br />
-            <div style={{display:'flex',flexDirection:'row',alignContent:'center',justifyContent:'center',marginBottom:'0',paddingBottom:'0',height:'7vh'}}>
+            <div  className='application' style={{display:'flex',flexDirection:'row',alignContent:'center',justifyContent:'center',marginBottom:'0',paddingBottom:'0',height:'7vh'}}>
                 <img src={image2} style={{height:'200%',transform:'translate(0,-3.5vh)'}}/>&nbsp;
                 <p style={{transform:'translate(0,-15px)'}}>&nbsp;&nbsp;Download it on: &nbsp;&nbsp;&nbsp;</p>
                 <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" alt="" /> &nbsp;

@@ -3,7 +3,7 @@ import image from "../images/Printed LOGO2Break.png";
 import data from "../data/PropertiesData"
 export default function Properties(){
     return(
-        [<div style={{overflow:'hidden'}}>
+        [<div id="ourinfo" style={{overflow:'hidden'}}>
             <img src={image} style={{width:'98.9vw',height:'95vh',transform:'translate(0,25vh)',background:'none'}} className="separator"/>
             <div style={{marginLeft:'50vw',width:'40vw'}}>
                 <h1 style={{textWrap:'nowrap', fontSize:'3vw'}}>Things we provide?</h1>
@@ -14,9 +14,6 @@ export default function Properties(){
         </div>,
         <div id="props">
             <h1 style={{fontSize:'5vw'}}>Services an <b style={{fontWeight:'bolder',textDecoration:'underline'}}>User</b> can Access</h1>
-            <br/>
-            <br/>
-            <br/>
             <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
                 {data.map((item,id)=>{
                     return(

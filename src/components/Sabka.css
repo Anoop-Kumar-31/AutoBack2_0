@@ -155,14 +155,178 @@ b{
     padding:0 5vw;
 }
 
+@media screen and (max-width:669px) {
+    #props{
+        h1{
+            font-size: xx-large !important;
+            text-wrap: wrap;
+            line-height: 1 !important;
+            margin-bottom: 0px !important;
+        }
+    }
+    #ourinfo>div>h1{
+            font-size: xx-large !important;
+    }
+    #ourinfo>div>h2{
+        font-size: large !important;
+    }
+    #ourinfo>div>p{
+        font-size: large !important;
+    }
+    #ourinfo>img{
+        width: 100% !important;
+        height: auto !important;
+        z-index: 99 ;
+        margin-top: 100px;
+        transform: translateY(20px) !important;
+    }
+    .PhotoText{
+        width: 100% !important;
+        h1{
+            margin-bottom: 10px !important;
+        }
+        p{
+            margin: 0 !important;
+            padding:  0 !important;
+            font-size: large;
+        }
+    }
 
+    .left{
+        /* width: 100% !important; */
+        padding: 50px 18px 0 18px !important;
+        h1{
+            font-size: xx-large !important;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }  
+        h2{
+            font-size: x-large !important;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        p{
+            font-size: large;
+            text-align: justify !important;
+        }
+    }
+    .potrait{
+        height: fit-content;
+        /* padding: 0 !important; */
+        img{
+            height: fit-content !important;
+            /* margin: 0 !important; */
+        }
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footRight{
+        /* padding: 20px 10px; */
+        border: none;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        margin: 0;
+        padding: 0;
+        h1{
+            text-wrap: wrap;
+            line-height: 1.5 !important;
+            background-color: #111111;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            margin:0;
+            align-self: center;
+        }
+        :last-child{
+            margin-top: 10px !important;
+        }
+
+    }
+    .footer>div:first-child{
+        height: 200px !important;
+        border: none !important;
+        img{
+            height: auto !important;
+            border-radius: 0 !important;
+            border: none !important;
+    }}
+    .footer>div{
+        width: 100vw !important;
+        border: none !important;
+        border-radius: 0 !important;
+        margin: 0;
+    }
+    .application{
+        display: flex !important;
+        flex-direction: column !important;
+        height: fit-content !important;
+
+    }
+    .mobileAccess{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        :first-child{
+            width:100px;
+            transform: translate(0) !important;
+            align-self: center;
+        }
+        :nth-child(3), :nth-child(4){
+            width: 250px;
+        }
+    }
+    #mob{
+        width: 100% !important;
+        margin: 0 !important;
+        div{
+            width:100% !important;
+            img{
+                width:95% !important;
+                height: auto !important;
+            }
+        }
+        :nth-child(2){
+            /* width: 100% !important; */
+            text-wrap: wrap;
+            margin:0 !important;
+            h1{
+                text-wrap: wrap;
+                line-height: 1 !important;
+                width: 100%;
+            }
+            p{
+                text-wrap: wrap !important;
+                width: fit-content !important;
+                padding: 0 10px 10px 10px !important;
+            }
+        }
+    }
+    nav{
+        button{
+            transform: translateX(-0.5vw) !important;
+        }
+        ul{
+            padding: 0px;
+        }
+    }
+}
 @media screen and (max-width:940px){
+    #props{
+        h1{
+            margin-bottom: 15px !important;
+        }
+    }
+
     .container{
         flex-direction: column;
     }
     .left{
         width: fit-content;
-        padding: 5vw 10vw;
+        padding: 10vh 10vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -200,10 +364,12 @@ b{
         }
     }
     .PropsPhoto{
-        width: 55%;
+        width: 90%;
     }
     .PhotoText{
         text-align: center !important;
+        padding: 10px;
+        margin: 10px;
         h1{
             font-size: 6vh !important;
             text-wrap: wrap;
@@ -280,6 +446,7 @@ b{
     #mobile{
         width:70vw !important;
     }
+
 }
 .signup-form{
     display: flex;
@@ -384,4 +551,9 @@ b{
         transform: scale(1.04);
     }
 
+}
+#props{
+    h1{
+        margin-bottom: 100px ;
+    }
 }
