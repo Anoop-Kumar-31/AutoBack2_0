@@ -1,45 +1,51 @@
-import React, { useState, useEffect } from "react"; // Import React and useEffect together
+import React, { useState, useEffect } from "react";
 import image from "../images/SelectedL.png";
-import "./Sabka.css";
+import "./NavBar.css";
 
 export default function NavBAR() {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
-        const handleResize = () => {
-            const button = document.querySelector("button");
-            button.style.opacity = window.innerWidth <= 940 ? "1" : "0";
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
         };
-        window.addEventListener("resize", handleResize);
-        handleResize(); 
 
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setIsExpanded(false);
+        }
+    };
+
     return (
-        <nav style={{ height: isExpanded ? "fit-content" : "90px" }}>
-            <img src={image} className="logo" style={{ height: "90px" }} alt="logo" />
-            <button onClick={() => setIsExpanded(!isExpanded)}  > {isExpanded ? 
-                    <div style={{ backgroundColor:'#363636', width:'30px 10px'}}>
-                        <div className="bar1" style={{ height:'3px', backgroundColor:'white', transform:'rotate(45deg) translate(5px,5px)'}}>&nbsp;</div>
-                        <div className="bar2" style={{ height:'3px', backgroundColor:'white', opacity:'0'}}>&nbsp;</div>
-                        <div className="bar3" style={{ height:'3px', backgroundColor:'white',transform:'rotate(-46deg) translate(6.5px,-6.4px)'}}>&nbsp;</div>
-                    </div>
-                :
-                    <div style={{ backgroundColor:'#363636', width:'30px 10px'}}>
-                        <div className="bar1" style={{ height:'3px', backgroundColor:'white' }}>&nbsp;</div>
-                        <div className="bar2" style={{ height:'3px', backgroundColor:'white'}}>&nbsp;</div>
-                        <div className="bar3" style={{ height:'3px', backgroundColor:'white'}}>&nbsp;</div>
-                    </div>
-                } </button>
-            <div>
-                <ul className="ThreedButt">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Feature</li>
-                    <li>Contact</li>
+        <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+            <div className="navbar-container">
+                <div className="navbar-logo">
+                    <img src={image} alt="AutoBack Logo" />
+                </div>
+
+                <button
+                    className="navbar-toggle"
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    aria-label="Toggle navigation"
+                >
+                    <span className={isExpanded ? 'bar bar-1 active' : 'bar bar-1'}></span>
+                    <span className={isExpanded ? 'bar bar-2 active' : 'bar bar-2'}></span>
+                    <span className={isExpanded ? 'bar bar-3 active' : 'bar bar-3'}></span>
+                </button>
+
+                <ul className={`navbar-menu ${isExpanded ? 'navbar-menu-active' : ''}`}>
+                    <li onClick={() => scrollToSection('home')}>Home</li>
+                    <li onClick={() => scrollToSection('services')}>Services</li>
+                    <li onClick={() => scrollToSection('solutions')}>Solutions</li>
+                    <li onClick={() => scrollToSection('about')}>About</li>
+                    <li onClick={() => scrollToSection('contact')}>Contact</li>
                 </ul>
             </div>
         </nav>

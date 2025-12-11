@@ -1,0 +1,57 @@
+/* ============================================
+   SOLUTIONS SECTION
+   ============================================ */
+
+.solutions {
+  background: var(--color-white);
+}
+
+.solutions-grid {
+  gap: var(--spacing-xl);
+}
+
+.solution-item {
+  background: var(--color-white);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  transition: all var(--transition-base);
+}
+
+.solution-item:hover {
+  border-color: var(--color-primary-light);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.solution-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.solution-content h3 {
+  font-size: 1.5rem;
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-sm);
+}
+
+.solution-content p {
+  font-size: 1.0625rem;
+  color: var(--color-gray-600);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

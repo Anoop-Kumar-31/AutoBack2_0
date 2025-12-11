@@ -1,0 +1,54 @@
+/* ============================================
+   WHY CHOOSE US SECTION
+   ============================================ */
+
+.why-choose-us {
+  background: var(--gradient-hero);
+}
+
+.reasons-grid {
+  gap: var(--spacing-xl);
+}
+
+.reason-item {
+  text-align: center;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-xl);
+}
+.reason-item:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  background-color: #f4f4f4aa;
+}
+
+.reason-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.reason-item h4 {
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-sm);
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reason-item p {
+  font-size: 1rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .reasons-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .reason-item h4 {
+    min-height: auto;
+  }
+}

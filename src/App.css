@@ -1,4 +1,19 @@
+/* ============================================
+   APP-SPECIFIC STYLES
+   ============================================ */
+
 .App {
-  text-align: center;
-  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area */
+.App main {
+  flex: 1;
+}
+
+/* Smooth scroll offset for navbar */
+html {
+  scroll-padding-top: 90px;
 }

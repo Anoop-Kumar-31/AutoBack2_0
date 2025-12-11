@@ -1,0 +1,162 @@
+/* ============================================
+   NAVBAR STYLES - PROFESSIONAL & CLEAN
+   ============================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-base);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-scrolled {
+  box-shadow: var(--shadow-md);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.navbar-container {
+  max-width: var(--container-2xl);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 65px;
+}
+
+.navbar-logo img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-xl);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-gray-700);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.navbar-menu li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width var(--transition-base);
+}
+
+.navbar-menu li:hover {
+  color: var(--color-primary);
+}
+
+.navbar-menu li:hover::after {
+  width: 100%;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background: var(--color-gray-800);
+  border-radius: 2px;
+  transition: all var(--transition-base);
+}
+
+.bar.active.bar-1 {
+  transform: rotate(45deg) translateY(10px) translateX(5px);
+}
+
+.bar.active.bar-2 {
+  width: 0;
+}
+
+.bar.active.bar-3 {
+  transform: rotate(-45deg) translateY(-10px) translateX(5px);
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE MENU
+   ============================================ */
+@media (max-width: 768px) {
+  .navbar-container {
+    height: 70px;
+  }
+
+  .navbar-logo img {
+    height: 50px;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--color-white);
+    box-shadow: var(--shadow-lg);
+    gap: 0;
+    padding: var(--spacing-md) 0;
+    transform: translateY(-120%);
+    opacity: 0;
+    transition: all var(--transition-base);
+  }
+
+  .navbar-menu-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navbar-menu li {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .navbar-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-menu li::after {
+    display: none;
+  }
+
+  .navbar-menu li:hover {
+    background: var(--color-gray-50);
+  }
+}

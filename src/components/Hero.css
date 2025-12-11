@@ -1,0 +1,233 @@
+/* ============================================
+   HERO SECTION - PROFESSIONAL & ENGAGING
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-xl);
+  max-width: 550px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+/* Hero Visual Cards */
+.hero-visual {
+  position: relative;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.hero-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all var(--transition-base);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.hero-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.hero-card-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.hero-card-2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.hero-card-3 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+.hero-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero-card h4 {
+  font-size: 1.25rem;
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-xs);
+}
+
+.hero-card p {
+  font-size: 0.9375rem;
+  color: var(--color-gray-600);
+}
+
+/* Hero Background */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-hero);
+}
+
+.hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.03;
+  background-image: 
+    radial-gradient(circle at 25px 25px, var(--color-gray-600) 2%, transparent 0%),
+    radial-gradient(circle at 75px 75px, var(--color-gray-600) 2%, transparent 0%);
+  background-size: 100px 100px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .hero {
+    height: fit-content;
+    padding-top: 60px;
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    gap: var(--spacing-xl);
+    height: fit-content;
+  }
+
+  .hero-visual {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-top: 70px;
+  }
+
+  .hero-container {
+    padding: var(--spacing-xl) var(--spacing-md);
+    height: fit-content;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    height: fit-content;
+    gap: var(--spacing-md);
+  }
+
+  .hero-card {
+    padding: var(--spacing-lg);
+  }
+
+  .hero-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-large {
+    width: 100%;
+  }
+
+  .hero-visual {
+    grid-template-columns: 1fr;
+    height: fit-content;
+  }
+
+  .hero-card-1,
+  .hero-card-2,
+  .hero-card-3 {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
