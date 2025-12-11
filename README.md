@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# AutoBack - AI-Powered Automation Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Professional AI/ML services company website built with React + Vite.
 
-## Available Scripts
+## 🚀 Live Demo
 
-In the project directory, you can run:
+[View Live Site](https://your-render-url.onrender.com)
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎨 **Professional Design System** - Clean, modern aesthetics with Inter + Poppins typography
+- 📊 **8 Comprehensive Sections** - Services, Solutions, Case Studies, Tech Stack, and more
+- 💼 **Business-Focused Content** - Professional copy that appeals to clients and recruiters
+- 📱 **Fully Responsive** - Mobile-first design with hamburger menu
+- ⚡ **Smooth Animations** - Professional hover effects and transitions
+- 🎯 **Strategic CTAs** - Multiple call-to-action buttons throughout
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **Frontend**: React 18.2
+- **Build Tool**: Vite 7.2
+- **Styling**: Vanilla CSS with CSS Variables
+- **Fonts**: Google Fonts (Inter, Poppins)
+- **Icons**: Emoji + CDN logos (Devicon)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation
 
-### `npm run build`
+```bash
+# Clone the repository
+git clone https://github.com/Anoop-Kumar-31/AutoBack2_0.git
+cd AutoBack2_0
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Start development server
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Build for production
+npm run build
 
-### `npm run eject`
+# Preview production build
+npm run serve
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🌐 Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Render (Recommended)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Push your code to GitHub
+2. Connect your GitHub repo to Render
+3. Use these build settings:
+   - **Build Command**: `npm install && npm run build`
+   - **Publish Directory**: `dist`
+   - **Node Version**: 20.19.0 or higher
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Vercel
 
-## Learn More
+```bash
+npm install -g vercel
+vercel
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Netlify
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run build
+# Upload the 'dist' folder to Netlify
+```
 
-### Code Splitting
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+AutoBack2_0/
+├── src/
+│   ├── components/
+│   │   ├── NavBAR.jsx / .css
+│   │   ├── Hero.jsx / .css
+│   │   ├── Services.jsx / .css
+│   │   ├── Solutions.jsx / .css
+│   │   ├── WhyChooseUs.jsx / .css
+│   │   ├── CaseStudies.jsx / .css
+│   │   ├── TechStack.jsx / .css
+│   │   ├── About.jsx / .css
+│   │   ├── ContactCTA.jsx / .css
+│   │   └── Footer.jsx / .css
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css (Design System)
+│   └── index.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── .nvmrc
+```
 
-### Analyzing the Bundle Size
+## 🎨 Design System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The project uses a comprehensive design system with:
 
-### Making a Progressive Web App
+- **Colors**: Professional blues, clean whites, subtle grays
+- **Typography**: 2-font system (Inter for body, Poppins for headings)
+- **Spacing**: Consistent spacing scale (8px base)
+- **Shadows**: Modern, layered shadows
+- **Gradients**: Subtle, professional gradients
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🔧 Environment Variables
 
-### Advanced Configuration
+No environment variables required for basic deployment. Update contact email in:
+- `src/components/ContactCTA.jsx` - Line 16
+- `src/components/Footer.jsx` - Line 35
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝 Customization
 
-### Deployment
+### Update Content
+- **Services**: Edit `src/components/Services.jsx`
+- **Case Studies**: Edit `src/components/CaseStudies.jsx`
+- **About Stats**: Edit `src/components/About.jsx`
+- **Contact Info**: Edit `src/components/ContactCTA.jsx` and `Footer.jsx`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Update Styling
+- **Colors**: Edit CSS variables in `src/index.css` (lines 12-50)
+- **Typography**: Edit font imports in `src/index.css` (line 7)
+- **Spacing**: Edit spacing scale in `src/index.css` (lines 52-58)
 
-### `npm run build` fails to minify
+## 🐛 Known Issues
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Ensure Node.js version is **20.19.0 or higher** for Vite 7.x compatibility
+- Dev server may require port 5173 to be available
+
+## 📄 License
+
+MIT
+
+## 👤 Author
+
+**Anoop Kumar**
+- Full Stack Developer
+- Email: amt312002@gmail.com
+- GitHub: [@Anoop-Kumar-31](https://github.com/Anoop-Kumar-31)
+
+---
+
+Built with ❤️ using React + Vite
